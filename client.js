@@ -1,4 +1,4 @@
-const socket = io("http://localhost:8000", {
+const socket = io("https://elegant-zuccutto-6c0418.netlify.app/", {
   transports: ["websocket", "polling", "flashsocket"],
 });
 

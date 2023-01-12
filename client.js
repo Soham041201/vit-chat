@@ -1,4 +1,4 @@
-const socket = io("https://elegant-zuccutto-6c0418.netlify.app/", {
+const socket = io("http://34.125.3.33:8000", {
   transports: ["websocket", "polling", "flashsocket"],
 });
 
@@ -14,7 +14,7 @@ const append = (message, position) => {
   messageContainer.append(messageElement);
 };
 
-const name = prompt("Enter your name to join the chat","Student");
+const name = prompt("Enter your name to join the chat", "Student");
 
 if (name != undefined) {
   socket.emit("new-user-joined", name);
@@ -45,5 +45,3 @@ socket.on("recieve", (data) => {
 socket.on("left", (data) => {
   append(`${data.name} left the chat room`, "center");
 });
-
-socket.dispose()

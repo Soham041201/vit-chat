@@ -1,4 +1,4 @@
-const socket = io("http://34.125.3.33:8000", {
+const socket = io("http://localhost:8000/", {
   transports: ["websocket", "polling", "flashsocket"],
 });
 
